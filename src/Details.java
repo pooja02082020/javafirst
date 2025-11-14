@@ -1,4 +1,4 @@
-package firstday;
+
 
 public class Details {
 

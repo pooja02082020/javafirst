@@ -1,5 +1,3 @@
-package firstday;
-
 public class VariableDemo {
 
 	int instanceVar = 100; //Instance Varable
