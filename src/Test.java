@@ -53,7 +53,7 @@ public class Test {
          int p = 7;
          boolean res = p++ == 7 && ++p == 9 || p++ == 9;
          System.out.println("p = " + p);
-         System.out.println("res = " + res);
+         System.out.println("result = " + res);
  
      }
 }
