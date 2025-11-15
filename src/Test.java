@@ -7,6 +7,8 @@ public class Test {
 	
 	
      public static void main(String[] args) {
+    	
+          
          List<Character> list = new ArrayList<>();
          list.add(0, 'V');
          list.add('T');
@@ -61,6 +63,9 @@ public class Test {
          boolean flag3 = obj instanceof Error; //Line n3
          boolean flag4 = obj instanceof Throwable; //Line n4
          System.out.println(flag3 + ":" + flag4);
- 
+         
+//         byte [] arr = new byte[0];
+//         System.out.println(arr[0]);
+// 
      }
 }
