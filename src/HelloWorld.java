@@ -1,4 +1,6 @@
-
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 
 public class HelloWorld {
 	
@@ -24,7 +26,18 @@ public class HelloWorld {
 		System.out.println(j);
 		
 		
+		 LocalDate date = LocalDate.of(2000, Month.JANUARY, 1);
+         Period period = Period.parse("p-30000y");
+         System.out.println(date.plus(period));
 		
+		
+         StringBuilder sb = new StringBuilder("SpaceStation");
+         sb.delete(5, 6).insert(5, " S").toString().toUpperCase();
+         System.out.println(sb);
+         
+         System.out.println("Hello" + 1 + 2 + 3 + 4);
+         
+         System.out.println( 1 + 2 + 3 + 4+"Hello" );
 	}
 
 }
