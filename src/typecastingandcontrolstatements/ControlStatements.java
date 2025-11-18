@@ -79,5 +79,20 @@ public class ControlStatements {
 			System.out.println(j);
 			++j;
 		}while(j<1);
+		
+		//break = stop the loop immediately
+		System.out.println("break statement");
+		for(int k=0;k<5;k++) {
+			if(k==2) break;
+			System.out.println(k);
+		}
+		
+		//continue - stop the current iteration
+		
+		System.out.println("continue statement");
+		for(int k=0;k<5;k++) {
+			if(k==2) continue;
+			System.out.println(k);
+		}
 	}
 }
