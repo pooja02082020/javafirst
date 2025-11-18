@@ -22,7 +22,7 @@ public class BasicConcepts {
 	    int b = ++x;
 	    int c = x++;
 	    System.out.println("a= "+a +"   b= "+ b + "    c= "+c);
-	    int dvalue = (a<b)?(a<c)?a:(b<c)?b:c:a;
+	    int dvalue = (a<b)?((a<c)?a:(b<c)?b:c):x;
 	    System.out.println(dvalue);
 	}
 
