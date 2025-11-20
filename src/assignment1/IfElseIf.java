@@ -3,7 +3,7 @@ package assignment1;
 public class IfElseIf {
 
 	public static void main(String[] args) {
-		int marks = 100;
+		int marks = 89;
 		if(marks>=90 ) {
 			System.out.println("Grade A");
 		}

@@ -9,7 +9,7 @@ public class EnterPassword {
 		Scanner sc = new Scanner(System.in);
 		String password ;
 		do {
-			System.out.println("Enter the password to enter");
+			System.out.println("Enter correct password to enter");
 			password= sc.next();
 			
 		}while(!password.equals("pooja"));

@@ -11,7 +11,7 @@ public class PrintNNumbers {
 		int num2 = sc.nextInt();
 	//	int result =0;
 		for(int i =num1;i<=num2;i++) {
-			System.out.println(i);
+			System.out.print(i+ " ");
 		}
 		sc.close();
 	}
