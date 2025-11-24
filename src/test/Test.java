@@ -1,31 +1,14 @@
 package test;
 
-class Point {
-    static int x;
-     int y;
-    
-    public String toString() {
-        return "Point(" + x + ", " + y + ")";
-    }
-}
- 
 public class Test {
-    public static void main(String[] args) {
-        Point p1 = new Point();
-        p1.x = 100;
-        p1.y = 200;
-        
-        Point p2 = new Point();
-        p2.x = 100;
-        p2.y = 200;
-        
-        System.out.println(p1);
-    }
+public static void main(String[] args) {
+		Car car = new Car();
+		car.color = "black";
+		car.brand = "Toyota";
+		car.speed = 40;
+		car.year = 2023;
+		car.accelerate(1);
+		System.out.println(car.speed);
+
+	}
 }
-
-
-
-
-
-
-
