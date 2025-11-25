@@ -1,25 +1,19 @@
 package collections;
-
 import java.util.*;
-
 
 public class LinkedListDemo {
     public static void main(String[] args) {
-    	
-    	  LinkedList<String> list = new LinkedList<>();
+        LinkedList<Integer> ll = new LinkedList<>();
 
-          list.add(null);
-          list.add(null);
-          list.add("10");
+        ll.add(10);
+        ll.add(20);
+        ll.addFirst(5);
+        ll.addLast(30);
 
-          System.out.println(list);
+        System.out.println(ll);
 
-          list.addFirst("10");
-
-          System.out.println(list);
-
-          list.addLast("10");
-
-          System.out.println(list);
+        ll.removeFirst();
+        ll.removeLast();
+        System.out.println(ll);
     }
 }
