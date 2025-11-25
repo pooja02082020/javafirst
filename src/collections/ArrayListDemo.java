@@ -3,24 +3,21 @@ package collections;
 import java.util.ArrayList;
 
 public class ArrayListDemo {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
 
-	public static void main(String[] args) {
-		ArrayList<String> al1 = new ArrayList<>();
-		al1.add(null);
-		al1.add("Test");
-		al1.add(2,"test");
-		al1.add(null);
-		System.out.println(al1.get(3));
-		
-		al1.remove(0);
-		System.out.println(al1);
-		
-		System.out.println(al1.set(0, null));  //not replacing inserting
-		
-		System.out.println(al1.size());
-		System.out.println(al1);
-		
-		
-	}
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add(1, "X");  // insert at index 1
 
+        System.out.println(list);
+        System.out.println(list.get(2));
+        list.set(2, "Z");  // update
+        System.out.println(list);
+        list.remove("X");  // remove by value
+        System.out.println(list);
+
+        System.out.println("Size = " + list.size());
+    }
 }
