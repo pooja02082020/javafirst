@@ -15,5 +15,7 @@ public class LinkedListDemo {
         ll.removeFirst();
         ll.removeLast();
         System.out.println(ll);
+        
+        System.out.println(ll.peekLast());
     }
 }
