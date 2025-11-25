@@ -14,6 +14,13 @@ public class ArrayListDemo {
 		
 		al1.remove(0);
 		System.out.println(al1);
+		
+		System.out.println(al1.set(0, null));  //not replacing inserting
+		
+		System.out.println(al1.size());
+		System.out.println(al1);
+		
+		
 	}
 
 }
