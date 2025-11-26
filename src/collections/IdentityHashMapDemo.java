@@ -11,7 +11,7 @@ public class IdentityHashMapDemo {
 
 		map.put(a1, 10);
 		map.put(a2, 20);
-		System.out.println();
+		System.out.println(map);
 	}
 
 }
