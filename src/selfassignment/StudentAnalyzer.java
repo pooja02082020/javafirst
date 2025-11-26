@@ -9,7 +9,7 @@ public class StudentAnalyzer {
 
         System.out.print("Enter number of students: ");
         int n = sc.nextInt();
-        sc.nextLine(); // consume newline
+        sc.nextLine();  //next line 
 
         String[] names = new String[n];
         int[] marks = new int[n];
