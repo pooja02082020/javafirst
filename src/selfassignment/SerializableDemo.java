@@ -16,7 +16,7 @@ public class SerializableDemo implements Serializable {
 
 	public static void main(String[] args) {
 
-		// ---------- SERIALIZATION ----------
+		// ---------- serialization ----------
 		try {
 			SerializableDemo obj = new SerializableDemo("Pooja", 25);
 
@@ -31,7 +31,7 @@ public class SerializableDemo implements Serializable {
 			e.printStackTrace();
 		}
 
-		// ---------- DESERIALIZATION ----------
+		// ---------- deserialization ----------
 		try {
 
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("data.ser"));
