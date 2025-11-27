@@ -15,8 +15,6 @@ public class RunnableDemo {
     	//Thread t1 = new Thread(new myThread1());
     	Thread t = new Thread(new MyThread1());
         t.start();
-        
-        t.sleep(1000);
   
         System.out.println("Thread Running 0"+ t.isAlive());
         
