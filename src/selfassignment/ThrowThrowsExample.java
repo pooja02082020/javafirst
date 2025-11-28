@@ -19,6 +19,11 @@ public class ThrowThrowsExample {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
+		try {
+		} finally {
+			System.out.println("finally executed");
+		}
 
 		// Manual throw example
 		try {
