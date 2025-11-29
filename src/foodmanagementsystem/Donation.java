@@ -4,29 +4,35 @@ public class Donation {
 
 	private int id;
 	private String foodItem;
-	private int quality;
-	
+	private int quantity;
+
+	public Donation(int id, String foodItem, int quantity) {
+		this.id = id;
+		this.foodItem = foodItem;
+		this.quantity = quantity;
+	}
+
 	public int getId() {
 		return this.id;
 	}
-	
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getFoodItem() {
 		return this.foodItem;
 	}
-	
+
 	public void setFoodItem(String foodItem) {
 		this.foodItem = foodItem;
 	}
-	
-	public int getuality() {
-		return this.quality;
+
+	public int getQuantity() {
+		return this.quantity;
 	}
-	
-	public void setQuality(int quality) {
-		this.quality = quality;
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 }
