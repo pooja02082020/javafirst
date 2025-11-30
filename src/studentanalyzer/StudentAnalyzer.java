@@ -21,7 +21,7 @@ public class StudentAnalyzer {
      sc.close();
  }
 
- // 1) Read students with validation
+ // Read students with validation
  private static void readStudents(Student[] students) {
      for (int i = 0; i < students.length; i++) {
          System.out.println("\n--- Enter details for Student " + (i + 1) + " ---");
@@ -67,14 +67,14 @@ public class StudentAnalyzer {
      }
  }
 
- // 2) Compute totals & grades
+ // Compute totals & grades
  private static void computeStats(Student[] students) {
      for (Student s : students) {
          s.computeStats();
      }
  }
 
- // 3) Menu
+ // Menu
  private static void menu(Student[] students) {
      int choice;
      do {
@@ -110,7 +110,7 @@ public class StudentAnalyzer {
      } while (choice != 5);
  }
 
- // 4) Print formatted report
+ // Print formatted report
  private static void printReport(Student[] students) {
      System.out.println("\n---------------- STUDENT REPORT ----------------");
      System.out.printf("%-5s %-15s %-5s %-5s %-5s %-7s %-10s %-5s%n",
@@ -125,7 +125,7 @@ public class StudentAnalyzer {
      }
  }
 
- // 5) Topper, lowest
+ // Topper, lowest
  private static void showTopperAndLowest(Student[] students) {
      Student topper = findTopper(students);
      Student lowest = findLowest(students);
@@ -164,7 +164,7 @@ public class StudentAnalyzer {
              s.getTotal(), s.getPercentage(), s.getGrade());
  }
 
- // 6) Subject toppers
+ // Subject toppers
  private static void showSubjectToppers(Student[] students) {
      for (int subjectIndex = 0; subjectIndex < 3; subjectIndex++) {
          Student topper = subjectTopper(students, subjectIndex);
@@ -183,7 +183,7 @@ public class StudentAnalyzer {
      return topper;
  }
 
- // 7) Search by name (substring, case-insensitive)
+ // Search by name 
  private static void searchByNameMenu(Student[] students) {
      System.out.print("Enter name to search : ");
      String query = sc.nextLine().toLowerCase();
