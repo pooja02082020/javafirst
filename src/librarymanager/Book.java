@@ -3,6 +3,7 @@ package librarymanager;
 import java.io.Serializable;
 
 public class Book implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	private String isbn;
 	private String title;
@@ -12,14 +13,13 @@ public class Book implements Serializable {
 	private int availableCopies;
 	private int year;
 
-	public Book(String isbn, String title, String author, String category, int totalCopies, int availableCopies,
-			int year) {
-		this.isbn = isbn;
-		this.title = title;
-		this.author = author;
-		this.category = category;
+	public Book(String isbn, String title, String author, String category, int totalCopies, int year) {
+		this.isbn = isbn.trim();
+		this.title = title.trim();
+		this.author = author.trim();
+		this.category = category.trim();
 		this.totalCopies = totalCopies;
-		this.availableCopies = availableCopies;
+		this.availableCopies = totalCopies;
 		this.year = year;
 	}
 
@@ -52,19 +52,22 @@ public class Book implements Serializable {
 	}
 
 	public void setTitle(String title) {
-		this.title = title;
+		this.title = title.trim();
 	}
 
 	public void setAuthor(String author) {
-		this.author = author;
+		this.author = author.trim();
 	}
 
 	public void setCategory(String category) {
-		this.category = category;
+		this.category = category.trim();
 	}
 
 	public void setTotalCopies(int totalCopies) {
 		this.totalCopies = totalCopies;
+		if (availableCopies > totalCopies) {
+			availableCopies = totalCopies;
+		}
 	}
 
 	public void setAvailableCopies(int availableCopies) {
@@ -73,6 +76,10 @@ public class Book implements Serializable {
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+
+	public boolean isAvailable() {
+		return availableCopies > 0;
 	}
 
 	@Override
