@@ -1,15 +1,16 @@
 package selfassignment;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainApp {
 
     public static void main(String[] args) {
 
-        PracticeMenuApp obj = new PracticeMenuApp();
+        PracticeMenuApp menuApp = new PracticeMenuApp();
         Scanner sc = new Scanner(System.in);
 
-        int choice;
+        int choice = 0;
 
         do {
             System.out.println("\n========= MENU =========");
@@ -24,19 +25,27 @@ public class MainApp {
             System.out.println("9. Exit");
             System.out.print("Enter your choice: ");
 
-            choice = sc.nextInt();
+            try {
+                choice = sc.nextInt();
 
-            switch (choice) {
-                case 1: obj.printFibonacci(); break;
-                case 2: obj.checkPrime(); break;
-                case 3: obj.reverseString(); break;
-                case 4: obj.checkPalindrome(); break;
-                case 5: obj.findLargest(); break;
-                case 6: obj.countVowelsConsonants(); break;
-                case 7: obj.factorial(); break;
-                case 8: obj.calculator(); break;
-                case 9: System.out.println("Exiting... Thank you!"); break;
-                default: System.out.println("Invalid choice! Try again.");
+                switch (choice) {
+                    case 1: menuApp.printFibonacci(); break;
+                    case 2: menuApp.checkPrime(); break;
+                    case 3: menuApp.reverseString(); break;
+                    case 4: menuApp.checkPalindrome(); break;
+                    case 5: menuApp.findLargest(); break;
+                    case 6: menuApp.countVowelsConsonants(); break;
+                    case 7: menuApp.factorial(); break;
+                    case 8: menuApp.calculator(); break;
+                    case 9: System.out.println("Exiting... Thank you!"); break;
+                    default: System.out.println("Invalid choice! Try again.");
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Please enter a valid numeric choice.");
+                sc.nextLine(); // clearing invalid input
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred in menu.");
             }
 
         } while (choice != 9);
