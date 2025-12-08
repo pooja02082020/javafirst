@@ -9,6 +9,10 @@ public class StudentService {
 	public boolean isValidEmail(String email) {
 		return email.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
 	}
+	
+	public boolean isValidMarks(int marks) {
+	    return marks >= 0 && marks <= 100;
+	}
 
 	public void addStudent(String name, String email, int marks) {
 		Student s = new Student(name, email, marks);
