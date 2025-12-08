@@ -23,8 +23,17 @@ public class Test {
                     sc.nextLine();  // flush
                     String name = sc.nextLine();
                     
-                    System.out.print("Enter email: ");
-                    String email = sc.nextLine();
+                    String email;
+                    while(true) {
+                        System.out.print("Enter email: ");
+                        email = sc.nextLine();
+
+                        if(service.isValidEmail(email)) {
+                            break;
+                        } else {
+                            System.out.println("Invalid email! Please try again.");
+                        }
+                    }
 
                     System.out.print("Enter marks: ");
                     int marks = sc.nextInt();
