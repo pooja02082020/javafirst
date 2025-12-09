@@ -5,11 +5,17 @@ import java.util.ArrayList;
 public class ArrayListDemo {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
+        
+        
 
         list.add("A");
         list.add("B");
         list.add("C");
         list.add(1, "X");  // insert at index 1
+       
+        //java.util.ConcurrentModificationException because if fail-fast collection
+//        for(String str:list) {
+//        	list.add("5");        }
 
         System.out.println(list);
         System.out.println(list.get(2));
