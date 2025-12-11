@@ -7,4 +7,9 @@ class Counter {
     Counter() {
         count++;
     }
+    public static void main(String[] args) {
+    	new Counter();
+		System.out.println(count);
+		
+	}
 }
