@@ -5,6 +5,7 @@ import java.sql.*;
 public class JDBCDemo {
 
 	public static void main(String[] args) throws SQLException {
+		//FOR DATABASE CONNECTION
 		String url = "jdbc:mysql://localhost:3306/jdbcdemo";
 		String user = "root";
 		String pass = "lohani";
